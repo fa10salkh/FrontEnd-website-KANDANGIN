@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganti Kata Sandi - Kandangin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-ganti-sandi">
+
+    <!-- Header untuk Pengguna Login -->
+    <header class="bg-white shadow-sm sticky-top">
+        <nav id="mainNav" class="container navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home2.html">
+                    <img src="assets/images/Logo_kandangin.jpeg" alt="Logo Kandangin" class="navbar-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="home2.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+                        <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+                        <li class="nav-item d-none d-lg-flex align-items-center"></li>
+                        <span class="text-muted mx-2">|</span>
+                        <a href="profil.html" class="ms-lg-4 nav-link active">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="navbar-profile-icon">
+                                <circle cx="12" cy="12" r="12" />
+                                <path fill="white"
+                                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                            </svg>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Konten Utama Halaman -->
+    <main class="change-password-page py-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-center g-5">
+                <!-- Kolom Kiri: Ikon Profil Besar -->
+                <div class="col-lg-5 text-center">
+                    <div class="big-profile-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="big-profile-svg">
+                            <path fill="white"
+                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
+                    </div>
+                </div>
+                <!-- Kolom Kanan: Form Ganti Sandi -->
+                <div class="col-lg-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="menu-icon-wrapper me-3">
+                            <i class="bi bi-person-fill-lock"></i>
+                        </div>
+                        <h2 class="form-title mb-0">Ganti Kata Sandi</h2>
+                    </div>
+                    <form action="#" method="POST">
+                        <div class="mb-3">
+                            <label for="currentPassword" class="form-label">Kata Sandi Saat Ini</label>
+                            <input type="password" class="form-control" id="currentPassword"
+                                placeholder="Masukkan Kata Sandi Saat Ini">
+                        </div>
+                        <div class="mb-4">
+                            <label for="newPassword" class="form-label">Kata Sandi Baru</label>
+                            <input type="password" class="form-control" id="newPassword"
+                                placeholder="Masukkan Kata Sandi yang Ingin Diperbarui">
+                        </div>
+                        <div class="d-grid">
+                            <button type="button" class="btn btn-auth-primary" data-bs-toggle="modal"
+                                data-bs-target="#gantiSandiModal">
+                                Ubah Kata Sandi
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <!-- Logo & Deskripsi -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <p class="footer-description">
+                        Our vision is to provide convenience<br>
+                        and help increase your sales business.
+                    </p>
+                    <div class="mt-1">
+                        <a href="#" class="social-icon-footer"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon-footer"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-icon-footer"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3"></div>
+                <div class="col-lg-5 d-flex justify-content-end gap-5">
+                    <!-- Tentang -->
+                    <div class="mb-4">
+                        <h5 class="footer-heading">Tentang</h5>
+                        <ul class="footer-links">
+                            <li><a href="#" class="footer-link">Tentang kandangin</a></li>
+                            <li><a href="#" class="footer-link">Hubungi kami</a></li>
+                            <li><a href="#" class="footer-link">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Sosial Media -->
+                    <div class="mb-4">
+                        <h5 class="footer-heading">Sosial Media</h5>
+                        <ul class="footer-links">
+                            <li><a href="#" class="footer-link">Facebook</a></li>
+                            <li><a href="#" class="footer-link">X</a></li>
+                            <li><a href="#" class="footer-link">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Pop up ganti kata sandi -->
+    <div class="modal fade" id="gantiSandiModal" tabindex="-1" aria-labelledby="gantiSandiModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center py-5">
+
+                    <h3 class="confirmation-text mb-4">
+                        Apakah Anda Yakin Ingin Mengubah Kata Sandi?
+                    </h3>
+
+                    <!-- Tombol Aksi -->
+                    <div class="d-flex justify-content-center gap-3">
+                        <button type="button" class="btn btn-confirm-action btn-confirm-yes">YA</button>
+                        <button type="button" class="btn btn-confirm-action btn-confirm-no"
+                            data-bs-dismiss="modal">TIDAK</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

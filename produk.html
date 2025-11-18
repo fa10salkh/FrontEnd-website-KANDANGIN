@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - Kandangin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-produk">
+    <div id="toast-container"></div>
+    <!-- Header untuk Pengguna Login -->
+    <header class="bg-white shadow-sm sticky-top">
+        <nav id="mainNav" class="container navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home2.html">
+                    <img src="assets/images/Logo_kandangin.jpeg" alt="Logo Kandangin" class="navbar-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="home2.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="produk.html">Produk</a></li>
+                        <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+                
+                            <span class="text-muted mx-2">|</span>
+                            <a href="profil.html" class="ms-lg-4 nav-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="navbar-profile-icon">
+                                    <circle cx="12" cy="12" r="12" />
+                                    <path fill="white"
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Product Section -->
+    <section id="produk" class="product-section py-5">
+        <div class="container">
+            <!-- Judul Section -->
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <a href="#" class="cart-icon-link invisible" aria-hidden="true">
+                    <i class="bi bi-cart3 cart-icon"></i>
+                </a>
+                <div class="text-center">
+                    <h2 class="product-section-title">Produk KANDANGIN</h2>
+                    <p class="product-section-subtitle mt-2">
+                        Dapatkan berbagai peralatan peternakan dengan kualitas terbaik dan harga terjangkau hanya di
+                        KANDANGIN
+                    </p>
+                </div>
+                <a href="keranjang.html" class="cart-icon-link position-relative">
+                    <i class="bi bi-cart3 cart-icon"></i>
+                    <span id="cart-count"
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                </a>
+            </div>
+
+            <!-- Navigasi Tab Produk -->
+            <ul class="nav nav-tabs justify-content-center border-0 mb-5" id="productTabs" role="tablist">
+                <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab"
+                        data-bs-target="#popular">Popular</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="tab"
+                        data-bs-target="#ekonomis">Ekonomis</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="tab"
+                        data-bs-target="#standar">Standar</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="tab"
+                        data-bs-target="#premium">Premium</button></li>
+            </ul>
+
+            <!-- Konten Tab -->
+            <div class="tab-content" id="productTabsContent">
+                <div class="tab-pane fade show active" id="popular" role="tabpanel">
+                    <div class="row">
+                        <!-- Kartu Produk 1: Sensor panas -->
+                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p1" data-name="Sensor panas"
+                            data-price="50000" data-image="assets/images/sensor-panas.jpeg">
+                            <div class="product-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h5 class="product-name">Sensor panas</h5>
+                                        <i class="bi bi-heart"></i>
+                                    </div>
+                                    <img src="assets/images/sensor-panas.jpeg" alt="Sensor Panas"
+                                        class="product-card-img">
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="product-price">Rp 50.000</span>
+                                        <a href="#" class="btn btn-beli">Beli</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Kartu Produk 2: Sensor dingin -->
+                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p2" data-name="Sensor dingin"
+                            data-price="50000" data-image="assets/images/sensor-dingin.jpeg">
+                            <div class="product-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h5 class="product-name">Sensor dingin</h5>
+                                        <i class="bi bi-heart"></i>
+                                    </div>
+                                    <img src="assets/images/sensor-dingin.jpeg" alt="Sensor Dingin"
+                                        class="product-card-img">
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="product-price">Rp 50.000</span>
+                                        <a href="#" class="btn btn-beli">Beli</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Kartu Produk 3: Sensor angin -->
+                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p3" data-name="Sensor angin"
+                            data-price="50000" data-image="assets/images/sensor-angin.jpeg">
+                            <div class="product-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h5 class="product-name">Sensor angin</h5>
+                                        <i class="bi bi-heart"></i>
+                                    </div>
+                                    <img src="assets/images/sensor-angin.jpeg" alt="Sensor Angin"
+                                        class="product-card-img">
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="product-price">Rp 50.000</span>
+                                        <a href="#" class="btn btn-beli">Beli</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Kartu Produk 4: Alarm darurat -->
+                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p4" data-name="Alarm darurat"
+                            data-price="50000" data-image="assets/images/alarm-darurat.jpeg">
+                            <div class="product-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h5 class="product-name">Alarm darurat</h5>
+                                        <i class="bi bi-heart"></i>
+                                    </div>
+                                    <img src="assets/images/alarm-darurat.jpeg" alt="Alarm Darurat"
+                                        class="product-card-img">
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="product-price">Rp 50.000</span>
+                                        <a href="#" class="btn btn-beli">Beli</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Kartu Produk 5: Lampu kandang -->
+                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p5" data-name="Lampu kandang"
+                            data-price="50000" data-image="assets/images/lampu-kandang.jpeg">
+                            <div class="product-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h5 class="product-name">Lampu kandang</h5>
+                                        <i class="bi bi-heart"></i>
+                                    </div>
+                                    <img src="assets/images/lampu-kandang.jpeg" alt="Lampu Kandang"
+                                        class="product-card-img">
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="product-price">Rp 50.000</span>
+                                        <a href="#" class="btn btn-beli">Beli</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Kartu Produk 6: Sensor gerak -->
+                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p6" data-name="Sensor gerak"
+                            data-price="50000" data-image="assets/images/sensor-gerak.jpeg">
+                            <div class="product-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h5 class="product-name">Sensor gerak</h5>
+                                        <i class="bi bi-heart"></i>
+                                    </div>
+                                    <img src="assets/images/sensor-gerak.jpeg" alt="Sensor Gerak"
+                                        class="product-card-img">
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="product-price">Rp 50.000</span>
+                                        <a href="#" class="btn btn-beli">Beli</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Kartu Produk 7: Kabel N2C -->
+                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p7" data-name="Kabel N2C"
+                            data-price="50000" data-image="assets/images/kabel-n2c.jpeg">
+                            <div class="product-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h5 class="product-name">Kabel N2C</h5>
+                                        <i class="bi bi-heart"></i>
+                                    </div>
+                                    <img src="assets/images/kabel-n2c.jpeg" alt="Kabel N2C" class="product-card-img">
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="product-price">Rp 50.000</span>
+                                        <a href="#" class="btn btn-beli">Beli</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Kartu Produk 8: Penyiram otomatis -->
+                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p8" data-name="Penyiram otomatis"
+                            data-price="50000" data-image="assets/images/penyiram-otomatis.jpeg">
+                            <div class="product-card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h5 class="product-name">Penyiram otomatis</h5>
+                                        <i class="bi bi-heart"></i>
+                                    </div>
+                                    <img src="assets/images/penyiram-otomatis.jpeg" alt="Penyiram Otomatis"
+                                        class="product-card-img">
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="product-price">Rp 50.000</span>
+                                        <a href="#" class="btn btn-beli">Beli</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tombol Tampilkan Lebih Banyak -->
+            <div class="row mt-4">
+                <div class="col-12 d-flex justify-content-between align-items-center">
+                    <span class="invisible">+100 Produk</span>
+                    <a href="#" class="show-more-link">Tampilkan lebih banyak</a>
+                    <span class="product-count">+100 Produk</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <!-- Logo & Deskripsi -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <p class="footer-description">
+                        Our vision is to provide convenience<br>
+                        and help increase your sales business.
+                    </p>
+                    <div class="mt-1">
+                        <a href="#" class="social-icon-footer"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon-footer"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-icon-footer"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3"></div>
+                <div class="col-lg-5 d-flex justify-content-end gap-5">
+                    <!-- Tentang -->
+                    <div class="mb-4">
+                        <h5 class="footer-heading">Tentang</h5>
+                        <ul class="footer-links">
+                            <li><a href="#" class="footer-link">Tentang kandangin</a></li>
+                            <li><a href="#" class="footer-link">Hubungi kami</a></li>
+                            <li><a href="#" class="footer-link">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Sosial Media -->
+                    <div class="mb-4">
+                        <h5 class="footer-heading">Sosial Media</h5>
+                        <ul class="footer-links">
+                            <li><a href="#" class="footer-link">Facebook</a></li>
+                            <li><a href="#" class="footer-link">X</a></li>
+                            <li><a href="#" class="footer-link">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var heartIcons = document.querySelectorAll('.bi-heart');
+            heartIcons.forEach(function (icon) {
+                icon.addEventListener('click', function () {
+                    this.classList.toggle('bi-heart-fill');
+                    this.classList.toggle('bi-heart');
+                });
+            });
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
