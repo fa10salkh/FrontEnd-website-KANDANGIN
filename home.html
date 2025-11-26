@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="page-home">
 
     <!-- Header untuk Pengguna Tamu -->
     <header class="bg-white shadow-sm sticky-top">
-        <nav id="mainNav" class="container navbar navbar-expand-lg">
+        <!--navbar-->
+        <nav id="mainNav" class="navbar navbar-expand-lg navbar-custom">
             <div class="container-fluid">
                 <a class="navbar-brand" href="home.html">
                     <img src="assets/images/Logo_kandangin.jpeg" alt="Logo Kandangin" class="navbar-logo">
@@ -27,15 +30,16 @@
                         <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
                         <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
                         <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
-                        <li class="nav-item d-none d-lg-flex align-items-center">
-                            <span class="text-muted mx-2">|</span>
-                            <a class="nav-link text-muted" href="registrasi.html">Registrasi</a>
+                        <li class="nav-item d-none d-lg-flex align-items-center right-group">
+                            <div class="nav-divider"></div>
+                            <a href="registrasi.html" class="nav-link link-registrasi">Registrasi</a>
+                            <a href="masuk.html" class="btn-masuk-custom">Masuk</a>
                         </li>
-                        <li class="nav-item d-lg-none">
-                            <a class="nav-link text-muted" href="registrasi.html">Registrasi</a>
+                        <li class="nav-item d-lg-none mt-3">
+                            <a href="registrasi.html" class="nav-link link-registrasi">Registrasi</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="masuk.html" class="btn btn-masuk ms-lg-3">Masuk</a>
+                        <li class="nav-item d-lg-none mt-2">
+                            <a href="masuk.html" class="btn-masuk-custom w-100">Masuk</a>
                         </li>
                     </ul>
                 </div>
@@ -52,19 +56,20 @@
                     <h1 class="hero-heading my-4">KANDANGIN</h1>
                     <p class="hero-description">
                         Kelola kandang Anda dengan lebih efisien menggunakan teknologi otomatisasi dari KANDANGIN.
-                        Pantau kondisi lingkungan, atur pencahayaan, dan kontrol peralatan secara real-time hanya dalam satu aplikasi.
+                        Pantau kondisi lingkungan, atur pencahayaan, dan kontrol peralatan secara real-time hanya dalam
+                        satu aplikasi.
                     </p>
                     <a href="#" class="btn btn-hubungi-kami mt-4">Hubungi Kami</a>
                 </div>
             </div>
         </div>
     </main>
-<footer class="footer-section">
+    <footer class="footer-section">
         <div class="container">
             <div class="row">
                 <!-- Logo & Deskripsi -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                  
+
                     <p class="footer-description">
                         Our vision is to provide convenience<br>
                         and help increase your sales business.
@@ -84,7 +89,6 @@
                         <ul class="footer-links">
                             <li><a href="#" class="footer-link">Tentang kandangin</a></li>
                             <li><a href="#" class="footer-link">Hubungi kami</a></li>
-                            <li><a href="#" class="footer-link">FAQ</a></li>
                         </ul>
                     </div>
 
@@ -99,8 +103,6 @@
                     </div>
                 </div>
             </div>
-
-            
         </div>
     </footer>
 
@@ -118,5 +120,4 @@
         });
     </script>
 </body>
-
 </html>

@@ -12,10 +12,9 @@
 </head>
 
 <body class="page-tentang">
-
-    <!-- Header untuk Pengguna Login -->
     <header class="bg-white shadow-sm sticky-top">
-        <nav id="mainNav" class="container navbar navbar-expand-lg">
+        <!--navbar-->
+        <nav id="mainNav" class="navbar navbar-expand-lg navbar-custom">
             <div class="container-fluid">
                 <a class="navbar-brand" href="home2.html">
                     <img src="assets/images/Logo_kandangin.jpeg" alt="Logo Kandangin" class="navbar-logo">
@@ -29,13 +28,17 @@
                         <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
                         <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
                         <li class="nav-item"><a class="nav-link active" href="tentang.html">Tentang</a></li>
-                        <li class="nav-item d-none d-lg-flex align-items-center">
-                            <span class="text-muted mx-2">|</span>
-                            <a href="profil.html" class="ms-lg-4 nav-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="navbar-profile-icon">
-                                    <circle cx="12" cy="12" r="12" />
-                                    <path fill="white"
-                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        <li class="nav-item d-none d-lg-flex align-items-center right-group">
+                            <div class="nav-divider"></div>
+
+                            <a href="profil.html" class="profile-icon-wrapper">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    style="width: 20px; height: 20px; color: #fff;">
+                                    <circle cx="8" cy="4.5" r="2.5" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" />
+                                    <path d="M 2 15 C 2 8, 14 8, 14 15" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" />
                                 </svg>
                             </a>
                         </li>
@@ -118,14 +121,14 @@
             <div class="row mt-5 pt-4">
                 <!-- Iklan 1 -->
                 <div class="col-lg-6 mb-4">
-                    
+
                     <div class="ads-card">
                         <img src="assets/images/tentang2.jpeg" alt="Iklan 1" class="ads-image">
                     </div>
                 </div>
                 <!-- Iklan 2 -->
                 <div class="col-lg-6 mb-4">
-                    
+
                     <div class="ads-card">
                         <img src="assets/images/tentang3.jpeg" alt="Iklan 2" class="ads-image">
                     </div>
@@ -158,7 +161,6 @@
                         <ul class="footer-links">
                             <li><a href="#" class="footer-link">Tentang kandangin</a></li>
                             <li><a href="#" class="footer-link">Hubungi kami</a></li>
-                            <li><a href="#" class="footer-link">FAQ</a></li>
                         </ul>
                     </div>
 
@@ -190,5 +192,4 @@
         });
     </script>
 </body>
-
 </html>
