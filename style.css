@@ -680,6 +680,14 @@ color: #151313;
 }
 
 /* Product Section */
+
+/*teks sisa stok */
+.stock-status {
+    font-size: 0.55rem; 
+    font-weight: 700;   
+    color: #dc3545;     
+}
+
 .product-section {
     background-color: #9bf3c7;
 }
@@ -739,18 +747,21 @@ color: #151313;
     color: #0B132A;
 }
 
+/* style.css */
+
 .btn-beli {
-    background-color: #fff;
-    color: #0B132A;
+    background-color: #0de480;  
+    color: #101510 !important;    
     font-weight: 500;
     border: none;
     border-radius: 8px;
-    padding: 0.4rem 1.2rem;
+    padding: 0.4rem 1.6rem;
+    transition: background-color 0.3s ease; 
 }
 
 .btn-beli:hover {
-    background-color: #f0f0f0;
-    color: #0B132A;
+    background-color: #0e8d52;  
+    color: #101510 !important;     
 }
 
 .show-more-link {
@@ -820,28 +831,34 @@ color: #151313;
     background-color: #fff;
     padding: 2rem;
     border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
+/*tulisan qris di atas*/
 .qris-logo-img {
     max-width: 220px; 
+    width: 100%;
+    height: auto;
 }
 
+/* Wrapper  Gambar qr */
 .qr-code-placeholder {
     width: 100%;
-    padding-bottom: 100%; 
-    position: relative;
-    background-color: #f8f9fa;
+    background-color: #fff; 
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
 }
 
-.qr-code-placeholder i {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 10rem; 
-    color: #adb5bd;
+/* kode qr */
+.payment-qr-img {
+    max-width: 250px; 
+    width: 100%;
+    height: auto;
 }
+
 
 /* button kembali dan sudah bayar */
 .btn-payment-action {
@@ -1125,9 +1142,10 @@ body {
 }
 
 .footer-divider {
-    border: none;
-    border-top: 1px solid #B8BCC8;
-    margin: 40px 0 25px;
+    border: 0;
+    border-top: 1px solid #B8BCC8; 
+    margin: 2rem 0;
+    opacity: 1;
 }
 
 .footer-bottom {

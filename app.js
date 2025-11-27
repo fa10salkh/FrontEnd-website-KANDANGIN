@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     };
 
+    /*
     const addToCart = (product) => {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         const existingProductIndex = cart.findIndex(item => item.id === product.id);
@@ -35,6 +36,23 @@ document.addEventListener('DOMContentLoaded', () => {
             product.quantity = 1;
             cart.push(product);
         }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartIcon();
+        showToast(`${product.name} telah ditambahkan ke keranjang!`);
+    };
+    */
+    //tambah produk berdasarkan nama
+    const addToCart = (product) => {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        // Cari produk berdasarkan NAMA (item.name), bukan ID. untuk mengatasi masalah beda ID di tab Popular vs Premium yang menyebabkan tampilan produk yang sama lebih dari 1.
+        const existingProductIndex = cart.findIndex(item => item.name === product.name);
+        if (existingProductIndex > -1) {
+            cart[existingProductIndex].quantity += 1; // Jika nama produk sudah ada, tambah jumlahnya
+        } else {
+            product.quantity = 1; // Jika belum ada, masukkan sebagai produk baru
+            cart.push(product);
+        }
+        
         localStorage.setItem('cart', JSON.stringify(cart));
         updateCartIcon();
         showToast(`${product.name} telah ditambahkan ke keranjang!`);
