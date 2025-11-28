@@ -4,18 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produk - Kandangin</title>
+    <title>Admin - Kelola Produk</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="page-produk">
-    <div id="toast-container"></div>
-    <!-- Header untuk pengguna yang sudah login -->
+<body class="page-admin-produk">
+
     <header class="bg-white shadow-sm sticky-top">
-        <!--navbar-->
         <nav id="mainNav" class="navbar navbar-expand-lg navbar-custom">
             <div class="container-fluid">
                 <a class="navbar-brand" href="home2.html">
@@ -27,7 +25,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto align-items-center">
                         <li class="nav-item"><a class="nav-link" href="home2.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="produk.html">Produk</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="admin-produk.html">Produk</a></li>
                         <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
                         <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
                         <li class="nav-item d-none d-lg-flex align-items-center right-group">
@@ -48,12 +46,9 @@
         </nav>
     </header>
 
-
-    <!-- Product Section -->
     <section id="produk" class="product-section py-5">
         <div class="container">
-            <!-- Judul Section -->
-            <div class="d-flex justify-content-between align-items-center mb-5">
+            <div class="d-flex justify-content-center align-items-center mb-5">
                 <div class="text-center">
                     <h2 class="product-section-title">Produk KANDANGIN</h2>
                     <p class="product-section-subtitle mt-2">
@@ -61,16 +56,8 @@
                         KANDANGIN
                     </p>
                 </div>
-                <a href="keranjang.html" class="cart-icon-link position-relative">
-
-                    <img src="assets/images/keranjang.png" alt="Keranjang" class="icon-keranjang-png">
-
-                    <span id="cart-count"
-                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
-                </a>
             </div>
 
-            <!-- Navigasi Tab Produk -->
             <ul class="nav nav-tabs justify-content-center border-0 mb-5" id="productTabs" role="tablist">
                 <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab"
                         data-bs-target="#popular">Popular</button></li>
@@ -82,13 +69,11 @@
                         data-bs-target="#premium">Premium</button></li>
             </ul>
 
-            <!-- Konten Tab -->
             <div class="tab-content" id="productTabsContent">
 
                 <div class="tab-pane fade show active" id="popular" role="tabpanel">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p1" data-name="Sensor panas"
-                            data-price="50000" data-image="assets/images/sensor-panas.jpeg">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -99,14 +84,13 @@
                                         class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 50.000</span>
-
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p1&name=Sensor%20panas&price=50000&stock=0&image=assets/images/sensor-panas.jpeg"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p2" data-name="Sensor dingin"
-                            data-price="25000" data-image="assets/images/sensor-dingin.jpeg">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -117,13 +101,13 @@
                                         class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 25.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p2&name=Sensor%20dingin&price=25000&stock=20&image=assets/images/sensor-dingin.jpeg"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p3" data-name="Sensor angin"
-                            data-price="30000" data-image="assets/images/sensor-angin.jpeg">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -134,13 +118,13 @@
                                         class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 30.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p3&name=Sensor%20angin&price=30000&stock=10&image=assets/images/sensor-angin.jpeg"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p4" data-name="Alarm darurat"
-                            data-price="65000" data-image="assets/images/alarm-darurat.jpeg">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -151,13 +135,13 @@
                                         class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 65.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p4&name=Alarm%20darurat&price=65000&stock=35&image=assets/images/alarm-darurat.jpeg"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p5" data-name="Lampu kandang"
-                            data-price="20000" data-image="assets/images/lampu-kandang.jpeg">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -168,13 +152,13 @@
                                         class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 20.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p5&name=Lampu%20kandang&price=20000&stock=82&image=assets/images/lampu-kandang.jpeg"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p6" data-name="Sensor gerak"
-                            data-price="35000" data-image="assets/images/sensor-gerak.jpeg">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -185,13 +169,13 @@
                                         class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 35.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p6&name=Sensor%20gerak&price=35000&stock=9&image=assets/images/sensor-gerak.jpeg"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p7" data-name="Kabel N2C"
-                            data-price="15000" data-image="assets/images/kabel-n2c.jpeg">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -201,13 +185,13 @@
                                     <img src="assets/images/kabel-n2c.jpeg" alt="Kabel N2C" class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 15.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p7&name=Kabel%20N2C&price=15000&stock=71&image=assets/images/kabel-n2c.jpeg"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p8" data-name="Penyiram otomatis"
-                            data-price="70000" data-image="assets/images/penyiram-otomatis.jpeg">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -218,7 +202,8 @@
                                         class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 70.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p8&name=Penyiram%20otomatis&price=70000&stock=4&image=assets/images/penyiram-otomatis.jpeg"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
@@ -228,8 +213,7 @@
 
                 <div class="tab-pane fade" id="ekonomis" role="tabpanel">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p5" data-name="Lampu kandang"
-                            data-price="20000" data-image="assets/images/lampu-kandang.jpeg">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -240,13 +224,13 @@
                                         class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 20.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p5&name=Lampu%20kandang&price=20000&stock=82&image=assets/images/lampu-kandang.jpeg"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p7" data-name="Kabel N2C"
-                            data-price="15000" data-image="assets/images/kabel-n2c.jpeg">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -256,13 +240,13 @@
                                     <img src="assets/images/kabel-n2c.jpeg" alt="Kabel N2C" class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 15.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p7&name=Kabel%20N2C&price=15000&stock=71&image=assets/images/kabel-n2c.jpeg"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p6" data-name="Sensor gerak"
-                            data-price="35000" data-image="assets/images/sensor-gerak.jpeg">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -273,13 +257,13 @@
                                         class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 35.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p6&name=Sensor%20gerak&price=35000&stock=9&image=assets/images/sensor-gerak.jpeg"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p11" data-name="Pupuk Kandang"
-                            data-price="25000" data-image="assets/images/pupuk-kandang.png">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -290,7 +274,8 @@
                                         class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 25.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p11&name=Pupuk%20Kandang&price=25000&stock=15&image=assets/images/pupuk-kandang.png"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
@@ -300,8 +285,7 @@
 
                 <div class="tab-pane fade" id="standar" role="tabpanel">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p9" data-name="Media Tanam Organik"
-                            data-price="18000" data-image="assets/images/media-tanam.png">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -311,13 +295,13 @@
                                     <img src="assets/images/media-tanam.png" alt="Media Tanam" class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 18.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p9&name=Media%20Tanam%20Organik&price=18000&stock=15&image=assets/images/media-tanam.png"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p2" data-name="Sensor dingin"
-                            data-price="25000" data-image="assets/images/sensor-dingin.jpeg">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -328,13 +312,13 @@
                                         class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 25.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p2&name=Sensor%20dingin&price=25000&stock=20&image=assets/images/sensor-dingin.jpeg"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p3" data-name="Sensor angin"
-                            data-price="30000" data-image="assets/images/sensor-angin.jpeg">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -345,13 +329,13 @@
                                         class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 30.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p3&name=Sensor%20angin&price=30000&stock=10&image=assets/images/sensor-angin.jpeg"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p4" data-name="Alarm darurat"
-                            data-price="65000" data-image="assets/images/alarm-darurat.jpeg">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -362,7 +346,8 @@
                                         class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 65.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p4&name=Alarm%20darurat&price=65000&stock=35&image=assets/images/alarm-darurat.jpeg"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
@@ -372,8 +357,7 @@
 
                 <div class="tab-pane fade" id="premium" role="tabpanel">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p10" data-name="Pupuk Kompos Premium"
-                            data-price="55000" data-image="assets/images/pupuk-kompos-premium.png">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -384,13 +368,13 @@
                                         class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 55.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p10&name=Pupuk%20Kompos%20Premium&price=55000&stock=29&image=assets/images/pupuk-kompos-premium.png"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p1" data-name="Sensor panas"
-                            data-price="50000" data-image="assets/images/sensor-panas.jpeg">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -401,13 +385,13 @@
                                         class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 50.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p1&name=Sensor%20panas&price=50000&stock=0&image=assets/images/sensor-panas.jpeg"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p8" data-name="Penyiram otomatis"
-                            data-price="70000" data-image="assets/images/penyiram-otomatis.jpeg">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -417,14 +401,14 @@
                                     <img src="assets/images/penyiram-otomatis.jpeg" alt="Penyiram Otomatis"
                                         class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
-                                        <span class="product-price">Rp 70.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <span class="product-price">Rp 50.000</span>
+                                        <a href="form-edit-produk.html?id=p1&name=Sensor%20panas&price=50000&stock=0&image=assets/images/sensor-panas.jpeg"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 mb-4 product-item" data-id="p12" data-name="Insektisida"
-                            data-price="88000" data-image="assets/images/insektisida.png">
+                        <div class="col-lg-3 col-md-6 mb-4 product-item">
                             <div class="product-card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-start mb-3">
@@ -434,7 +418,8 @@
                                     <img src="assets/images/insektisida.png" alt="Insektisida" class="product-card-img">
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <span class="product-price">Rp 88.000</span>
-                                        <a href="#" class="btn btn-beli">Beli</a>
+                                        <a href="form-edit-produk.html?id=p12&name=Insektisida&price=88000&stock=11&image=assets/images/insektisida.png"
+                                            class="btn btn-beli">Edit</a>
                                     </div>
                                 </div>
                             </div>
@@ -446,21 +431,16 @@
         </div>
     </section>
 
-    <!--footer-->
     <footer class="footer-section">
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <p class="footer-copyright">© 2025 KANDANGIN. Semua hak cipta dilindungi.</p>
                     <p class="footer-description" style="margin-bottom: 0;"> “Dari peternak, untuk peternak menuju
-                        sistem kandang cerdas Indonesia.”
-                    </p>
+                        sistem kandang cerdas Indonesia.” </p>
                 </div>
             </div>
-
             <hr class="footer-divider" style="width: 100%; margin: 25px 0;">
-
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="mt-1">
@@ -469,24 +449,10 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var heartIcons = document.querySelectorAll('.bi-heart');
-            heartIcons.forEach(function (icon) {
-                icon.addEventListener('click', function () {
-                    this.classList.toggle('bi-heart-fill');
-                    this.classList.toggle('bi-heart');
-                });
-            });
-        });
-    </script>
-    <script src="app.js"></script>
 </body>
 
 </html>

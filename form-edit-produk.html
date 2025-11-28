@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Produk - Kandangin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-edit-produk">
+
+    <header class="bg-white shadow-sm sticky-top">
+        <nav id="mainNav" class="navbar navbar-expand-lg navbar-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home2.html">
+                    <img src="assets/images/Logo_kandangin.jpg" alt="Logo Kandangin" class="navbar-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="home2.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="admin-produk.html">Produk</a></li>
+                        <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang</a></li>
+                        <li class="nav-item d-none d-lg-flex align-items-center right-group">
+                            <div class="nav-divider"></div>
+                            <a href="profil.html" class="profile-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                    style="width: 20px; height: 20px; color: #fff;">
+                                    <circle cx="8" cy="4.5" r="2.5" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" />
+                                    <path d="M 2 15 C 2 8, 14 8, 14 15" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="edit-product-section">
+        <div class="container mt-4">
+            <div class="text-center mb-5">
+                <h2 class="product-section-title">Produk KANDANGIN</h2>
+                <p class="product-section-subtitle mt-2">
+                    Dapatkan berbagai peralatan peternakan dengan kualitas terbaik dan harga terjangkau hanya di
+                    KANDANGIN
+                </p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card card-edit-form bg-white">
+                        <div class="card-body">
+
+                            <div class="row mb-4">
+                                <div class="col-md-5 mb-3 mb-md-0">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <h4 class="mb-0 fw-bold" id="preview-name">Sensor panas</h4>
+                                        <span class="stock-warning ms-3" id="preview-stock">Stok Tersisa 15</span>
+                                    </div>
+                                    <div class="img-wrapper d-flex justify-content-center align-items-center"
+                                        style="height: auto;">
+                                        <img src="assets/images/sensor-panas.jpeg" alt="Preview Produk"
+                                            class="current-product-img" id="preview-image">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-7 ps-md-5 d-flex align-items-center">
+                                    <div class="w-100">
+                                        <label for="edit-image" class="form-label fw-bold small">Gambar</label>
+                                        <input type="file" class="form-control form-control-custom w-100"
+                                            id="edit-image">
+                                        <div class="form-text text-muted mt-1">Format: JPG, PNG. Maksimal 2MB.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <form id="form-data-produk">
+                                <div class="mb-3">
+                                    <label for="edit-name" class="form-label small fw-bold">Ubah Nama</label>
+                                    <input type="text" class="form-control form-control-custom" id="edit-name">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="edit-stock" class="form-label small fw-bold">Ubah Stok</label>
+                                    <input type="number" class="form-control form-control-custom" id="edit-stock">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="edit-price" class="form-label small fw-bold">Ubah Harga</label>
+                                    <input type="text" class="form-control form-control-custom" id="edit-price">
+                                </div>
+
+                                <div class="d-flex justify-content-between mt-5">
+                                    <button type="button" class="btn btn-perbarui">Perbarui</button>
+
+                                    <button type="button" class="btn btn-hapus">Hapus</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <p class="footer-copyright">© 2025 KANDANGIN. Semua hak cipta dilindungi.</p>
+                    <p class="footer-description" style="margin-bottom: 0;"> “Dari peternak, untuk peternak menuju
+                        sistem kandang cerdas Indonesia.” </p>
+                </div>
+            </div>
+            <hr class="footer-divider" style="width: 100%; margin: 25px 0;">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="mt-1">
+                        <a href="#" class="social-icon-footer"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon-footer"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="modalHapus" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center py-4">
+                    <div class="icon-wrapper-danger mb-4"><i class="bi bi-x-lg"></i></div>
+                    <h4 class="confirmation-text mb-4">Apakah Anda Yakin Ingin Menghapus Produk ?</h4>
+                    <div class="d-flex justify-content-center gap-3">
+                        <button type="button" class="btn btn-konfirmasi-ya" id="confirm-delete-btn">YA</button>
+                        <button type="button" class="btn btn-konfirmasi-tidak" data-bs-dismiss="modal">TIDAK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalPerbarui" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center py-4">
+                    <div class="icon-wrapper-success mb-4"><i class="bi bi-check-lg"></i></div>
+                    <h4 class="confirmation-text mb-4">Apakah Anda Yakin Ingin Memperbarui Produk ?</h4>
+                    <div class="d-flex justify-content-center gap-3">
+                        <button type="button" class="btn btn-konfirmasi-ya" id="confirm-update-btn">YA</button>
+                        <button type="button" class="btn btn-konfirmasi-tidak" data-bs-dismiss="modal">TIDAK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="edit-produk.js"></script>
+</body>
+
+</html>

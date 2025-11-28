@@ -26,30 +26,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     };
 
-    /*
     const addToCart = (product) => {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        // Cek apakah produk dengan ID yang sama sudah ada di keranjang
         const existingProductIndex = cart.findIndex(item => item.id === product.id);
+        
         if (existingProductIndex > -1) {
+            // Jika ID sudah ada, tambahkan jumlahnya (Quantity)
             cart[existingProductIndex].quantity += 1;
         } else {
+            // Jika ID belum ada, tambahkan sebagai item baru
             product.quantity = 1;
-            cart.push(product);
-        }
-        localStorage.setItem('cart', JSON.stringify(cart));
-        updateCartIcon();
-        showToast(`${product.name} telah ditambahkan ke keranjang!`);
-    };
-    */
-    //tambah produk berdasarkan nama
-    const addToCart = (product) => {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        // Cari produk berdasarkan NAMA (item.name), bukan ID. untuk mengatasi masalah beda ID di tab Popular vs Premium yang menyebabkan tampilan produk yang sama lebih dari 1.
-        const existingProductIndex = cart.findIndex(item => item.name === product.name);
-        if (existingProductIndex > -1) {
-            cart[existingProductIndex].quantity += 1; // Jika nama produk sudah ada, tambah jumlahnya
-        } else {
-            product.quantity = 1; // Jika belum ada, masukkan sebagai produk baru
             cart.push(product);
         }
         
@@ -57,6 +45,36 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCartIcon();
         showToast(`${product.name} telah ditambahkan ke keranjang!`);
     };
+
+
+    // --- fungsi cek stok otomatis ---
+    const checkStockStatus = () => {
+        // Ambil semua kartu produk
+        const productCards = document.querySelectorAll('.product-card');
+
+        productCards.forEach(card => {
+            // Cari elemen teks stok dan tombol beli di dalam kartu ini
+            const stockElement = card.querySelector('.stock-status');
+            const button = card.querySelector('.btn-beli');
+
+            if (stockElement && button) {
+                // Ambil teksnya (misal: "Stok Tersisa 0")
+                const stockText = stockElement.innerText;
+                
+                // Ambil angkanya saja menggunakan Regex
+                // (\d+) yaitu mencari angka di dalam teks
+                const stockNumber = parseInt(stockText.match(/\d+/)[0]);
+
+                // Logika: Jika stok 0, ubah tombol
+                if (stockNumber === 0) {
+                    button.classList.add('btn-habis'); 
+                    button.innerText = "Habis";        
+                }
+            }
+        });
+    };
+    checkStockStatus();
+
 
     // logika halaman produk//
     if (document.body.classList.contains('page-produk')) {

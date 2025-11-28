@@ -58,9 +58,10 @@
                 <div class="col-lg-5 mb-4 mb-lg-0">
                     <div class="qris-panel">
                         <img src="assets/images/qris.png" alt="QRIS Logo" class="qris-logo-img img-fluid mb-4">
-                        <div class="qr-code-placeholder text-center">
-                            <img src="assets/images/qr-pembayaran.png" alt="Scan QR Code untuk Membayar"
-                                class="img-fluid payment-qr-img">
+                        <div class="qr-code-placeholder text-center d-flex flex-column align-items-center">
+                            <img src="assets/images/qr-pembayaran.png" alt="Scan QR Code"
+                                class="img-fluid payment-qr-img mb-2">
+                            <p class="payment-date mb-0">12/12/2025</p>
                         </div>
                     </div>
                 </div>
@@ -71,9 +72,9 @@
                             <div class="receipt-header d-flex justify-content-between mt-4">
                                 <span class="text-muted">Produk</span>
                                 <span class="text-muted">Jumlah</span>
-                                <span class="text-muted">Harga</span>
+                                <span class="text-muted">Harga Satuan</span>
                             </div>
-                            <!-- Item akan di-generate oleh JavaScript di sini -->
+
                         </div>
                         <hr class="my-4">
                         <div class="receipt-total d-flex justify-content-between">
@@ -138,4 +139,5 @@
     </script>
     <script src="app.js"></script>
 </body>
+
 </html>
