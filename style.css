@@ -1,4 +1,19 @@
 /* halaman autentikasi yaitu masuk dan registrasi */
+/* Style untuk Input Group Password */
+.input-group .form-control {
+    border-right: 0; 
+}
+
+.input-group .input-group-text {
+    border-left: 0; 
+    background-color: #F7F7F8; 
+}
+
+
+.form-control:focus + .input-group-text {
+    border-color: #0d6efd; 
+    background-color: #fff;
+}
 .btn-back-custom {
     position: absolute;
     top: 2rem;
