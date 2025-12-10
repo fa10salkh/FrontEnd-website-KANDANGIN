@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Saya</title>
+    <title>Profil Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="page-profil">
+<body class="page-admin-profil">
     <header class="bg-white shadow-sm sticky-top">
         <nav id="mainNav" class="navbar navbar-expand-lg navbar-custom">
             <div class="container-fluid">
@@ -30,7 +30,7 @@
                         <li class="nav-item d-none d-lg-flex align-items-center right-group">
                             <div class="nav-divider"></div>
                             
-                            <a href="profil.html" class="d-flex flex-column align-items-center text-decoration-none ms-3">
+                            <a href="admin-profil.html" class="d-flex flex-column align-items-center text-decoration-none ms-3">
                                 <div class="profile-icon-wrapper">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
                                         style="width: 20px; height: 20px; color: #fff;">
@@ -41,7 +41,7 @@
                                     </svg>
                                 </div>
                                 <span id="nav-username-display" class="mt-1 small fw-bold text-dark" style="font-size: 0.75rem; line-height: 1;">
-                                    User
+                                    Admin
                                 </span>
                             </a>
 
@@ -66,17 +66,17 @@
                     </div>
 
                     <h4 class="fw-bold mt-4 mb-0" id="main-username-display" style="color: #0B132A;">
-                        Nama Pengguna
+                        Nama Admin
                     </h4>
                 </div>
 
                 <div class="col-lg-6">
                     
                     <div class="mb-4">
-                        <h2 class="fw-bold" style="color: #0B132A;">HALO <span id="halo-username-display">Pengguna</span>!</h2>
+                        <h2 class="fw-bold" style="color: #0B132A;">HALO <span id="halo-username-display">Admin</span>!</h2>
                     </div>
 
-                    <h6 class="account-section-title">AKUN</h6>
+                    <h6 class="account-section-title">AKUN ADMIN</h6>
                     <ul class="list-group list-group-flush account-menu">
                         <li class="list-group-item">
                             <a href="ganti-sandi.html"
@@ -165,19 +165,19 @@
     
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // 1. Ambil nama dari Local Storage (Disimpan saat Login/Registrasi)
-            // Jika kosong, default "Tamu" di figma contohnya ujang kedu
-            const loggedInUser = localStorage.getItem("loggedInUser") || "Ujang Kedu";
+            // Ambil nama dari Local Storage (Menggunakan key yang sama dengan user: 'loggedInUser')
+            // Nanti jika ada login khusus admin, key-nya bisa dibedakan.
+            const loggedInUser = localStorage.getItem("loggedInUser") || "Admin";
 
-            // 2. Isi Nama di Navbar
+            // Isi Nama di Navbar
             const navNameEl = document.getElementById("nav-username-display");
             if (navNameEl) navNameEl.innerText = loggedInUser;
 
-            // 3. Isi Nama di Bawah Ikon Besar
+            // Isi Nama di Bawah Ikon Besar
             const mainNameEl = document.getElementById("main-username-display");
             if (mainNameEl) mainNameEl.innerText = loggedInUser;
 
-            // 4. Isi Nama di Sapaan HALO
+            // Isi Nama di Sapaan HALO
             const haloNameEl = document.getElementById("halo-username-display");
             if (haloNameEl) haloNameEl.innerText = loggedInUser;
         });
