@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const updateCartIcon = () => {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        const cartCounters = document.querySelectorAll('#cart-count'); // Menargetkan semua counter
+        const cartCounters = document.querySelectorAll('#cart-count'); 
         if (cartCounters.length > 0) {
             const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
             cartCounters.forEach(counter => {
@@ -29,14 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const addToCart = (product) => {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         
-        // Cek apakah produk dengan ID yang sama sudah ada di keranjang
+        // mengecek apakah produk dengan ID yang sama sudah ada di keranjang
         const existingProductIndex = cart.findIndex(item => item.id === product.id);
         
         if (existingProductIndex > -1) {
-            // Jika ID sudah ada, tambahkan jumlahnya (Quantity)
+            // jika ID sudah ada, tambahkan jumlahnya (Quantity)
             cart[existingProductIndex].quantity += 1;
         } else {
-            // Jika ID belum ada, tambahkan sebagai item baru
+            // jika ID belum ada, tambahkan sebagai item baru
             product.quantity = 1;
             cart.push(product);
         }
@@ -47,25 +47,24 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
 
-    // --- fungsi cek stok otomatis ---
+    //  fungsi cek stok otomatis
     const checkStockStatus = () => {
-        // Ambil semua kartu produk
+        // ambil semua kartu produk
         const productCards = document.querySelectorAll('.product-card');
 
         productCards.forEach(card => {
-            // Cari elemen teks stok dan tombol beli di dalam kartu ini
+            // cari elemen teks stok dan tombol beli di dalam kartu ini
             const stockElement = card.querySelector('.stock-status');
             const button = card.querySelector('.btn-beli');
 
             if (stockElement && button) {
-                // Ambil teksnya (misal: "Stok Tersisa 0")
+                // ambil teksnya (misal: "Stok Tersisa 0")
                 const stockText = stockElement.innerText;
                 
-                // Ambil angkanya saja menggunakan Regex
-                // (\d+) yaitu mencari angka di dalam teks
+                // ambil angkanya saja menggunakan Regex
                 const stockNumber = parseInt(stockText.match(/\d+/)[0]);
 
-                // Logika: Jika stok 0, ubah tombol
+                // logika: Jika stok 0, ubah tombol
                 if (stockNumber === 0) {
                     button.classList.add('btn-habis'); 
                     button.innerText = "Habis";        

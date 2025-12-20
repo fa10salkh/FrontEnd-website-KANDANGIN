@@ -165,19 +165,18 @@
     
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // 1. Ambil nama dari Local Storage (Disimpan saat Login/Registrasi)
-            // Jika kosong, default "Tamu" di figma contohnya ujang kedu
+        
             const loggedInUser = localStorage.getItem("loggedInUser") || "Ujang Kedu";
 
-            // 2. Isi Nama di Navbar
+            // mengisi Nama di Navbar
             const navNameEl = document.getElementById("nav-username-display");
             if (navNameEl) navNameEl.innerText = loggedInUser;
 
-            // 3. Isi Nama di Bawah Ikon Besar
+            // mengisi Nama di Bawah Ikon Besar
             const mainNameEl = document.getElementById("main-username-display");
             if (mainNameEl) mainNameEl.innerText = loggedInUser;
 
-            // 4. Isi Nama di Sapaan HALO
+            // mengisi Nama di Sapaan HALO
             const haloNameEl = document.getElementById("halo-username-display");
             if (haloNameEl) haloNameEl.innerText = loggedInUser;
         });

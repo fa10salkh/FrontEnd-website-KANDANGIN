@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Ambil data dari URL
+    
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
 
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const productStock = urlParams.get('stock');
     const productImage = urlParams.get('image');
 
-    // Isi data ke HTML (Preview & Form)
+    // Isi data ke HTML 
     if (productName) {
         document.getElementById('preview-name').innerText = productName;
         document.getElementById('edit-name').value = productName;
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // logika pop up modal
-    // ketika tombol perbarui diklik maka tampilkan modal hijau
+    // ketika tombol perbarui diklik maka tampilkan tampilan hijau
     const btnPerbarui = document.querySelector('.btn-perbarui');
     if (btnPerbarui) {
         btnPerbarui.addEventListener('click', function(e) {
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const confirmDeleteBtn = document.getElementById('confirm-delete-btn');
     if (confirmDeleteBtn) {
         confirmDeleteBtn.addEventListener('click', function() {
-            // Logika hapus dari database bisa ditaruh di sini
+            // logika  hapus dari database bisa ditaruh di sini
             alert('Sukses! Produk berhasil dihapus.');
             window.location.href = 'admin-produk.html';
         });

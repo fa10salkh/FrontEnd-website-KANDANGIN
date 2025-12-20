@@ -165,19 +165,18 @@
     
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Ambil nama dari Local Storage (Menggunakan key yang sama dengan user: 'loggedInUser')
-            // Nanti jika ada login khusus admin, key-nya bisa dibedakan.
+            // ambil nama dari Local Storage (Menggunakan key yang sama dengan user: 'loggedInUser') nanti jika ada login khusus admin, key-nya bisa dibedakan.
             const loggedInUser = localStorage.getItem("loggedInUser") || "Admin";
 
-            // Isi Nama di Navbar
+            // mengisi Nama di Navbar
             const navNameEl = document.getElementById("nav-username-display");
             if (navNameEl) navNameEl.innerText = loggedInUser;
 
-            // Isi Nama di Bawah Ikon Besar
+            // mengisi Nama di Bawah Ikon Besar
             const mainNameEl = document.getElementById("main-username-display");
             if (mainNameEl) mainNameEl.innerText = loggedInUser;
 
-            // Isi Nama di Sapaan HALO
+            // mwngisi Nama di Sapaan HALO
             const haloNameEl = document.getElementById("halo-username-display");
             if (haloNameEl) haloNameEl.innerText = loggedInUser;
         });
